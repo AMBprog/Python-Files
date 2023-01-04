@@ -4,9 +4,9 @@ from hashlib import sha256
 from getpass import getpass
 
 
-entree = input("in : ")
-sortie = input("out : ")
-key = getpass("key : ")
+enter = input("in : ") #Enter the name of your input file
+exit = input("out : ") #Enter a name for your output file
+key = getpass("key : ") #Give a key
 
 keys = sha256(key.encode('utf-8')).digest()
 with open(entree,'rb') as f_entree:
